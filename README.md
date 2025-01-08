@@ -17,6 +17,16 @@ python3 mean_reversion.py companies.in 2023-01-01 2024-12-31 0.05
 ```
 which reads a list of companies from `companies.in`, selects the daily close prices of these companies from January 1, 2023 to December 31, 2024, and uses p < 0.05 to identify companies whose prices don't exhibit mean-reverting behavior.
 
-`market_performance.py` reads a list of companies and their portfolio allocations and plots the performance of the portfolio against the S&P 500 and NASDAQ over a number of years. 
+`market_performance.py` reads a list of companies and their portfolio allocations and plots the performance of the portfolio against the S&P 500 and NASDAQ over a number of years. It takes four command-line arguments: the file name containing a list of companies and the percentage of each one within a portfolio, a start and end date for the lookback period in the format `yyyy-mm-dd`, and an amount of starting capital. For example, running
+```
+python3 market_performance.py portfolio.in 2020-06-01 2024-12-01 10000
+```
+creates a plot of the performance of the portfolio in `portfolion.in` from June 1, 2020 to December 1, 2024 against the NASDAQ and S&P 500 with a starting capital of $10,000. This program does not support intra-year lookback periods, meaning the start and end dates must have different years.
 
-To run 
+## Input formats
+
+For `mean_reversion.py` and `market_performance.py` to run properly, they expect inputs in specific formats. 
+
+`mean_reversion.py` expects a file where each line contians a stock symbol and the name of the corresponding company separated by whitespace (`companies.in` illustrates this format). 
+
+`market_performance.py` expects a file where each line contains a stock symbol, the name of the company, and the company's percentage in the portfolio (take a look at `portfolio.in` for an example).
