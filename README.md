@@ -1,4 +1,4 @@
-# Stock trading with the Ornstein-Uhlenbeck process
+# Stock trading with the Ornstein-Uhlenbeck process 📈
 This repository contains code for a mean-reversion trading algorithm based on the Ornstein-Uhlenbeck (OU) process. The scripts in this repository are meant to illustrate the implementation of such an algorithm and should not be used to inform real investment decisions.
 
 ## Installation
