@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ## Usage
 There are two executale scripts in this repository, `mean_reversion.py` and `market_performance.py`. 
 
-`mean_reversion.py` reads a list of companies, checks them for mean-reverting behavior, fits an OU process to their price series, and prints a list of companies whose stock can be potentially bought or shorted. This script outputs recommended portfolio allocations for each company too. This program takes four command-line arguments: the file name containing the company list, a start date and end date for the look back period in the format `yyyy-mm-dd`, and a threshold for the Augmented Dickey-Fuller test, which filters out non-mean reverting companies from the original list. For example, consider the command
+`mean_reversion.py` reads a list of companies, checks them for mean-reverting behavior, fits an OU process to their price series, and prints a list of companies whose stock can be potentially bought or shorted. This script outputs recommended portfolio allocations for each company too. This program takes four command-line arguments: the file name containing the company list, a start date and end date for the look back period in the format `yyyy-mm-dd`, and a threshold for the [Augmented Dickey-Fuller](https://en.wikipedia.org/wiki/Augmented_Dickey–Fuller_test) test, which filters out non-mean reverting companies from the original list. For example, consider the command
 
 ```
 python3 mean_reversion.py companies.in 2023-01-01 2024-12-31 0.05
