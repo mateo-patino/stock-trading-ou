@@ -8,7 +8,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-There are two executale scripts in this repository, `mean_reversion.py` and `market_performance.py`. 
+There are two executable scripts in this repository, `mean_reversion.py` and `market_performance.py`. 
 
 ### mean_reversion.py
 
